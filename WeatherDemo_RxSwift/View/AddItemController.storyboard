@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Item Controller-->
+        <scene sceneID="bMV-F2-xS4">
+            <objects>
+                <viewController storyboardIdentifier="AddItemController" id="eat-YC-f0i" customClass="AddItemController" customModule="WeatherDemo_RxSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SxO-fF-qcr"/>
+                        <viewControllerLayoutGuide type="bottom" id="S6F-mZ-4Ba"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dfQ-YU-sT9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pea-zh-vAs">
+                                <rect key="frame" x="16" y="28" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Zby-jh-JiW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textOnExit:" destination="eat-YC-f0i" eventType="editingDidEndOnExit" id="aRL-aY-gbW"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="pea-zh-vAs" secondAttribute="leading" id="1Nn-bo-TQa"/>
+                            <constraint firstItem="pea-zh-vAs" firstAttribute="top" secondItem="SxO-fF-qcr" secondAttribute="bottom" constant="8" id="W4T-Li-YFu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pea-zh-vAs" secondAttribute="trailing" id="iIv-sR-WEb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="pea-zh-vAs" id="UOH-Xj-J6b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSH-YX-92o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1577" y="250"/>
+        </scene>
+    </scenes>
+</document>
